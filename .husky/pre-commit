@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 提交时修复 .vue .js .ts 文件的格式 通过能够提交 否则不允许提交
+# eslint --fix ./src --ext .vue,.js,.ts
+
+npx lint-staged
+
